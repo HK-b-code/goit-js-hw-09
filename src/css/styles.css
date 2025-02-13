@@ -1,18 +1,176 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  background-color: #e75555;
+}
+
+.list {
+  text-align: center;
+  width: 200px;
+
+}
+
+.item {
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: scale 500ms ease-in;
+}
+
+.item:first-child {
+  margin-bottom: 30px;
+}
+
+.item_link {
+  color: white;
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  scale: 2;
+}
+
+.go_back {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.go_back:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 24px;
+  list-style: none;
+  margin: 24px 156px;
+  padding: 0;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  max-height: 200px;
+  object-fit: cover;
+  cursor: url('../img/cursor.png') 12 3, pointer;
+  transition: transform .2s ease;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  background: #fff;
+}
+
+label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+}
+
+input,
+textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding: 8px 16px;
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+    overflow-y: auto;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid #000;
+  transition: transform .2s ease;
+}
+
+input:active,
+textarea:active {
+  transition: transform .2s ease;
+}
+
+form>button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  padding: 8px 16px;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+form>button:hover {
+  background: #6c8cff;
+  transition: transform .2s ease;
+}
